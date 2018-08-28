@@ -1,5 +1,6 @@
 from __future__ import division
 from collections import Counter
+from functools import partial
 import traceback
 import re
 import random
@@ -150,6 +151,63 @@ def checkRandom():
 	list1 = [0,1,2,3,4,5]
 	random.shuffle(list1)
 	assert list1[0] != 0
+
+@O.k
+def regexSearch():
+	flag = False
+	string = "I like icecream"
+	search = re.search(r'like', string)
+	if search:
+		flag = True
+	assert flag == True
+
+class Set:
+    def __init__(self, values=None):
+        self.dict = {}
+
+        if values is not None:
+            for value in values:
+                self.add(value)
+
+    def __repr__(self):
+        return "Set: " + str(self.dict.keys())
+
+    def add(self, value):
+        self.dict[value] = True
+
+    def contains(self, value):
+        return value in self.dict
+
+   
+
+s = Set([10,20,30,40])
+s.add(50)
+
+@O.k
+def checkOop():    
+    assert s.contains(50) == True
+
+def multiply(x, y): return x * y
+
+@O.k
+def checkMap():	
+	p = map(multiply, [1, 2], [4, 5])
+	for i in p:		
+		assert i == 4
+		break
+
+
+documents = ['Dog','Cat','Rat','Dog','Eagle','Sparrow','Snake','Cat','Rat','Dog','Dog']
+
+for i, document in enumerate(documents):
+    if i == 5:
+        tuple_test = (i, document)
+
+@O.k
+def checkEnumerate():    
+    assert tuple_test == (5, "Sparrow")
+
+
 
 if __name__== "__main__":
   O.report()
