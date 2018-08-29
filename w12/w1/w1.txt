@@ -1,0 +1,84 @@
+
+C:\CSC_791\w12\w1>python w1.py
+
+-----| testingFailure |-----------------------
+# pass
+
+-----| testingSuccess |-----------------------
+# pass
+
+-----| checkWhiteSpace |-----------------------
+# pass
+
+-----| checRegex |-----------------------
+# pass
+
+-----| checkDivision |-----------------------
+# pass
+
+-----| checkStringoperations |-----------------------
+# pass
+
+-----| checkException |-----------------------
+# pass
+
+-----| checkLists |-----------------------
+# pass
+
+-----| checkTuples |-----------------------
+# pass
+
+-----| checkDictionary |-----------------------
+# pass
+
+-----| checkCounter |-----------------------
+# pass
+
+-----| checkSets |-----------------------
+# pass
+
+-----| checkLoops |-----------------------
+# pass
+
+-----| checkBoolean |-----------------------
+# pass
+
+-----| checkSorted |-----------------------
+# pass
+
+-----| checkListComprehension |-----------------------
+# pass
+
+-----| checkGenerator |-----------------------
+# pass
+
+-----| checkRandom |-----------------------
+# pass
+
+-----| regexSearch |-----------------------
+# pass
+
+-----| checkOop |-----------------------
+# pass
+
+-----| checkMap |-----------------------
+# pass
+
+-----| checkEnumerate |-----------------------
+# pass
+
+-----| checkFunctionalTools |-----------------------
+# pass
+
+-----| checkZip |-----------------------
+# pass
+
+-----| checkArg |-----------------------
+# pass
+
+-----| checkDoubler |-----------------------
+# pass
+
+# pass= 26 fail= 0 %pass = 100%
+
+C:\CSC_791\w12\w1>

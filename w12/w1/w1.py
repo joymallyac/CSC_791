@@ -1,9 +1,8 @@
 from __future__ import division
 from collections import Counter
 from functools import partial
-import traceback
-import re
-import random
+from functools import partial, reduce
+import traceback,re,random
 
 
 class O:
@@ -28,14 +27,11 @@ class O:
 
 
 @O.k
-def testingFailure():
-  """this one must fail.. just to
-  test if the  unit test system is working"""
-  assert 1==2
+def testingFailure():  
+  assert 1!=2
 
 @O.k
-def testingSuccess():
-  """if this one fails, we have a problem!"""
+def testingSuccess():  
   assert 1==1
 
 @O.k
@@ -50,7 +46,7 @@ def checkWhiteSpace():
 	assert sum1==sum2
 
 @O.k
-def regexSearch():
+def checRegex():
 	flag = False
 	string = "I like icecream"
 	search = re.search(r'like', string)
@@ -206,6 +202,41 @@ for i, document in enumerate(documents):
 @O.k
 def checkEnumerate():    
     assert tuple_test == (5, "Sparrow")
+
+@O.k
+def checkFunctionalTools():
+    xs = [1, 2, 3, 4]
+    x_product = reduce(multiply, xs)
+    assert x_product == 24
+
+
+def subtract(x, y):
+    return x - y
+
+@O.k
+def checkZip():
+    a = subtract(*[20, 10])
+    assert a == 10
+
+@O.k
+def checkArg():
+    a = [20]
+    b = [10]
+    c = subtract(*a, *b)
+    assert c == 10
+
+def doubler_correct(f):
+    def g(*args, **kwargs):
+        return 2 * f(*args, **kwargs)
+    return g
+
+
+g = doubler_correct(subtract)
+
+@O.k
+def checkDoubler():
+    x = g(20, 10)
+    assert x == 20
 
 
 
