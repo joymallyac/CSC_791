@@ -1,5 +1,5 @@
-from testFile import O
 from __future__ import division
+from testFile import O
 from math import floor
 import random
 
